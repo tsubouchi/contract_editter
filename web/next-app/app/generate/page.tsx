@@ -1,6 +1,7 @@
+"use client";
+
 import React, { useState, useRef } from 'react';
 import DropZone from '../components/DropZone';
-import { htmlToDocxBlob } from '../../lib/htmlToDocx';
 
 export default function GeneratePage() {
   const [preview, setPreview] = useState('');
@@ -9,9 +10,10 @@ export default function GeneratePage() {
   const [error, setError] = useState('');
   const previewRef = useRef<HTMLDivElement>(null);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!preview) return;
-    const blob = htmlToDocxBlob(preview);
+    const { htmlToDocxBlob } = await import('../../lib/htmlToDocx.client');
+    const blob = await htmlToDocxBlob(preview);
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import AuthPanel from './components/AuthPanel';
 import DropZone from './components/DropZone';
@@ -5,7 +6,6 @@ import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import PreviewPane from './components/PreviewPane';
 import DocumentUploader from './components/DocumentUploader';
-import { htmlToDocxBlob } from '../lib/htmlToDocx';
 
 export default function HomePage() {
   const [preview, setPreview] = useState('');
@@ -17,9 +17,10 @@ export default function HomePage() {
   const [editLoading, setEditLoading] = useState(false);
   const [editError, setEditError] = useState('');
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!preview) return;
-    const blob = htmlToDocxBlob(preview);
+    const { htmlToDocxBlob } = await import('../lib/htmlToDocx.client');
+    const blob = await htmlToDocxBlob(preview);
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
