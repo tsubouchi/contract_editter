@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "web",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "rewrites": [
