@@ -10,7 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "html-docx-js": "^1.0.3",
+    "html-docx-js": "^0.3.1",
     "file-saver": "^2.0.5",
     "mammoth": "^1.4.23",
     "@google/genai": "^0.6.0",
