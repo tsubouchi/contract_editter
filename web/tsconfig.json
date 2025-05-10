@@ -9,9 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "types": [
-      "vite/client"
-    ],
     "outDir": "dist"
   },
   "include": ["src", "app", "types"],
