@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Vite + TypeScript プロジェクト初期化 (`pnpm create vite` など)
+- [x] TypeScript プロジェクト初期化 (tsc ベース)
 - [ ] Tailwind CSS セットアップ
 - [ ] ルーティング（`/edit`, `/generate`）
 - [ ] Word 編集フロー
