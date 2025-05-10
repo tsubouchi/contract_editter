@@ -1,0 +1,6 @@
+version: '1'
+embeddings:
+  - table: documents
+    column: html
+    query_name: mcp_match_documents
+    match_count: 10 

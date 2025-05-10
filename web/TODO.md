@@ -1,0 +1,47 @@
+# TODO
+
+- [ ] Vite + TypeScript プロジェクト初期化 (`pnpm create vite` など)
+- [ ] Tailwind CSS セットアップ
+- [ ] ルーティング（`/edit`, `/generate`）
+- [ ] Word 編集フロー
+  - [x] `.docx` → HTML 変換 (`app/lib/docxToHtml`)
+  - [ ] 変更指示入力コンポーネント (`InstructionInput`)
+  - [ ] LLM へ指示 + HTML 送信、結果をマージ
+  - [ ] HTML → DOCX 変換してダウンロード
+- [ ] 文書生成フロー
+  - [ ] 要件入力コンポーネント (`GenerateInput`)
+  - [x] LLM で HTML 資料生成 (`app/lib/htmlGenerate.ts`)
+  - [ ] HTML → DOCX 変換してダウンロード
+- [ ] ドラッグ&ドロップ UI (`DropZone`, `WordUpload`)
+- [x] 変換ライブラリ統合 (`html-docx-js`, `mammoth`)
+- [ ] プレビュー機能 (`PreviewPane`)
+- [ ] LLM 連携 (`app/api/llm.ts`)
+  - [ ] ストリーム応答を UI に表示
+  - [x] プロンプトユーティリティ (`app/lib/prompts.ts`)
+- [ ] `app/lib` ユーティリティ実装
+- [ ] エラーハンドリング (サイズ制限, パース失敗, API エラー)
+- [ ] ESLint & Prettier 設定
+- [ ] Vitest ユニットテスト追加
+- [ ] GitHub Actions CI (lint/build)
+- [ ] README 追記（利用手順、技術解説）
+- [ ] ライセンスファイル追加
+- [x] ワイヤーフレーム作成（モノクロ・改善版）
+- [x] Tailwind カスタムテーマ: 白黒 2 色パレット設定 (`tailwind.config.cjs`)
+- [x] ボタン hover 反転スタイル実装 (`index.css .btn`)
+- [x] Typewriter アニメーション (`.typewriter`) を PreviewPane で使用 (PreviewPane.ts)
+- [x] PreviewPane 実装
+- [x] GeneratePage 実装（タイプライター + DL）
+
+## Supabase / Vercel
+- [ ] Supabase プロジェクト作成 & `documents` テーブル、`docx` バケット作成
+- [ ] RLS ポリシー設定 (owner = auth.uid())
+- [x] `app/api/supabase.ts` でクライアント初期化
+- [x] `/api/documents` エンドポイント (create/list/get)
+- [x] DOCX 生成後に Supabase Storage へアップロード
+- [x] GitHub Actions に Supabase migration ワークフロー追加
+- [x] Vercel 環境変数 (`SUPABASE_URL`, `SUPABASE_ANON_KEY`, etc.) 設定（Vercel Dashboard または `vercel env add`）
+- [x] Vercel デプロイ設定 (`vercel.json` rewrites)
+- [x] Supabase MCP server セットアップ (supabase/mcp.yml & CLI script)
+- [x] `/api/search` Edge Function 実装 (MCP 呼び出し)
+- [x] Search UI コンポーネント (`SearchBar`, `SearchResults`)
+- [x] 自然言語クエリから結果表示、クリックでプレビューページ遷移 (PreviewPage) 

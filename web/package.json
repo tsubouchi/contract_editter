@@ -1,0 +1,30 @@
+{
+  "name": "html-to-word-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "html-docx-js": "^1.0.3",
+    "file-saver": "^2.0.5",
+    "mammoth": "^1.4.23",
+    "@google/genai": "^0.6.0",
+    "@supabase/supabase-js": "^2.39.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.17",
+    "vitest": "^1.4.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.1",
+    "@types/file-saver": "^2.0.5"
+  }
+} 

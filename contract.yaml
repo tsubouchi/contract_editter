@@ -1,0 +1,7 @@
+parties:
+  company:
+    name: "ボンギンカン株式会社"
+    address: ""  # 会社住所は未記載
+  individual:
+    name: "岸谷 祥平"
+    address: "〒141-0001 東京都品川区北品川5-3-1-3609" 

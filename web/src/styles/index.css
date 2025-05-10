@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typewriter animation */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 2s steps(40, end);
+}
+
+/* Button hover inversion */
+.btn {
+  @apply border border-black px-4 py-2 rounded transition-colors duration-150;
+}
+.btn:hover {
+  @apply bg-black text-white;
+} 
